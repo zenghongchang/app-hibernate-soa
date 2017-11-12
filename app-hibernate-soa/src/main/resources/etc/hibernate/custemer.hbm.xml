@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="edu.hnust.application.orm">
+<!-- 客户信息 -->
+	<class name="Customer" table="customer_info" dynamic-update="true" dynamic-insert="true">
+		<id column="id" name="id">
+			<generator class="native" />
+		</id>
+		<property name="customerLoginName" column="login_name" />
+		<property name="customerPassWord" column="pass_word" />
+		<property name="passwd" column="passwd" />
+
+		<property name="registeredMobilePhoneNumber" column="registered_mobile_phone_number" />
+		<property name="registeredAttn" column="registered_attn" />
+	
+		<property name="accountPeriod" column="account_period" />
+		<property name="accountPeriodDate" column="account_period_date" />
+		<property name="lastPaymentDate" column="last_payment_date" />
+		<property name="extendCredit" column="extend_credit" />
+		<property name="accountBalance" column="account_balance" />
+		<property name="currentDebt" column="current_debt" />
+		<property name="showAccountBalance" column="show_account_balance" />
+
+		<property name="salesman" column="sales_man" />
+		<property name="customerService" column="customer_service" />
+		<property name="chargedWeightErrorRange" column="charged_weight_error_range" />
+
+		<property name="customerLevel" column="customer_level" />
+		<property name="customerType" column="customer_type" />
+	
+		<property name="customerNameShort" column="customer_name_short" />
+		<property name="customerFullName" column="customer_full_name" />
+
+  		<property name="registeredAddress" column="registered_address" />
+		<property name="registeredAddressState" column="registered_address_state" />	
+		<property name="registeredAddressCity" column="registered_address_city" />
+		<property name="registeredAddressArea" column="registered_address_area" />
+
+  		<property name="businessAddress" column="business_address" />
+		<property name="businessAddressState" column="business_address_state" />	
+		<property name="businessAddressCity" column="business_address_city" />
+		<property name="businessAddressArea" column="business_address_area" />
+
+		<property name="financeAttnName" column="finance_attn_name" />
+		<property name="financeLandline" column="finance_landline" />
+		<property name="financeTelephone" column="finance_telephone" />
+		<property name="financeEmail" column="finance_email" />
+		<property name="financeQQ" column="finance_qq" />
+	
+		<property name="logisticsAttnName" column="logistics_attn_name" />
+		<property name="logisticsLandline" column="logistics_landline" />
+		<property name="logisticsTelephone" column="logistics_telephone" />
+		<property name="logisticsEmail" column="logistics_email" />
+		<property name="logisticsQQ" column="logistics_qq" />
+	
+		<property name="legalPerson" column="legal_person" />
+		<property name="saleScale" column="sale_scale" />
+		<property name="remark" column="remark" />
+		<property name="customerToken" column="customer_token" />
+		<property name="softDeleteFlag" column="soft_delete_flag" />
+		<property name="creator" column="creator" />
+		<property name="createDate" column="create_date" />
+	</class>
+</hibernate-mapping>
