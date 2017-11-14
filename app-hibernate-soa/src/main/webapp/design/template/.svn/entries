@@ -1,0 +1,55 @@
+10
+
+dir
+2508
+svn://192.168.180.174/repos/project/jiufang-base-erp-ui/src/main/webapp/design/template
+svn://192.168.180.174/repos
+
+
+
+2017-11-13T02:02:21.899545Z
+2505
+fba02
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6ea21fac-023b-438a-a5c0-3c43eb0da691
+
+customer
+dir
+
+shipping
+dir
+
+finance
+dir
+
+waybill
+dir
+
+system
+dir
+
+configuration
+dir
+
+admin
+dir
+
+page
+dir
+
+user
+dir
+
