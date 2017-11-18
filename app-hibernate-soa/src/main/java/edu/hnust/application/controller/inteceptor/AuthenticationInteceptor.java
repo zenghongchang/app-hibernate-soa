@@ -7,6 +7,8 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
+import edu.hnust.application.util.Md5Util;
+
 /**
  * SOA拦截器
  * 
@@ -24,7 +26,7 @@ public class AuthenticationInteceptor implements HandlerInterceptor {
         if (StringUtils.isEmpty(token)) {
             return false;
         }
-        System.out.println(token);
+        System.out.println(new Md5Util(token).toMD5());
         return true;
     }
     
