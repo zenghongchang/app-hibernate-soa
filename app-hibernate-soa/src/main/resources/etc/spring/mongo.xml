@@ -11,7 +11,7 @@
 
 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
 		<constructor-arg name="mongo" ref="mongo" />
-		<constructor-arg name="databaseName" value="jtomtoperp" />
+		<constructor-arg name="databaseName" value="demo" />
 		<constructor-arg name="userCredentials" ref="mongoCredentials" />
 	</bean>
 

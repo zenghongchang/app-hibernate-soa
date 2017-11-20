@@ -93,9 +93,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public ReturnPageData<User> pageQueryUser(Map<String, Object> requestArgs) {
         ReturnPageData<User> data = new ReturnPageData<User>();
-        if (MapUtils.isEmpty(requestArgs)) {
-            return data;
-        }
         List<User> list = commonDao.fetchCollection(User.class, requestArgs);
         Long count = commonDao.fetchCollectionCount(User.class, requestArgs);
         data.setCollection(list);

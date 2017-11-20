@@ -16,6 +16,5 @@
 
 	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate"
 		p:connection-factory-ref="jedisConnectionFactory" />
-	<!-- <bean id="redisCache" class="com.tomtop.system.libraries.redis.RedisCache"> 
-		<property name="redisTemplate" ref="redisTemplate"></property> </bean> -->
+	<!-- <property name="redisTemplate" ref="redisTemplate"></property> </bean> -->
 </beans>

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import edu.hnust.application.orm.User;
 import edu.hnust.application.service.user.UserService;
+import edu.hnust.application.system.ReturnPageData;
 import edu.hnust.application.system.ServiceResponse;
 import edu.hnust.application.system.ServiceResponseCode;
 import edu.hnust.application.system.ServiceResponseDescription;
@@ -43,13 +44,32 @@ public class UserController {
      */
     @RequestMapping(value = "validateUser", method = RequestMethod.POST)
     @ResponseBody
-    private ServiceResponse<User> validateUser(@RequestBody Map<String, String> requstArgs) {
+    public ServiceResponse<User> validateUser(@RequestBody Map<String, String> requstArgs) {
         ServiceResponse<User> response = new ServiceResponse<User>();
         try {
             String loginName = requstArgs.get("loginName");
             String password = requstArgs.get("password");
             User user = userService.validateUser(loginName, password);
             response.setResult(user);
+            response.setCode(ServiceResponseCode.SUCCESS);
+            response.setDescription(ServiceResponseDescription.SUCCESS);
+        } catch (Exception e) {
+            e.printStackTrace();
+            response.setResult(null);
+            response.setCode(ServiceResponseCode.SERVER_ERROR);
+            response.setDescription(ServiceResponseDescription.ERROR);
+        }
+        return response;
+    }
+    
+    @RequestMapping(value = "pageQueryUser", method = RequestMethod.POST)
+    @ResponseBody
+    public ServiceResponse<ReturnPageData<User>> pageQueryUser(@RequestBody Map<String, Object> requstArgs) {
+        ServiceResponse<ReturnPageData<User>> response = new ServiceResponse<ReturnPageData<User>>();
+        try {
+            
+            ReturnPageData<User> pageData = userService.pageQueryUser(requstArgs);
+            response.setResult(pageData);
             response.setCode(ServiceResponseCode.SUCCESS);
             response.setDescription(ServiceResponseDescription.SUCCESS);
         } catch (Exception e) {
