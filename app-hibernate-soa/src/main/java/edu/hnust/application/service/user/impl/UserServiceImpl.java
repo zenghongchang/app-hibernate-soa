@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import edu.hnust.application.dao.CommonDao;
-import edu.hnust.application.orm.User;
+import edu.hnust.application.orm.user.User;
 import edu.hnust.application.service.user.UserService;
 import edu.hnust.application.system.ReturnPageData;
 import edu.hnust.application.util.Md5Util;

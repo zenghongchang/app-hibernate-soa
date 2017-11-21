@@ -3,7 +3,7 @@ package edu.hnust.application.service.user;
 import java.util.List;
 import java.util.Map;
 
-import edu.hnust.application.orm.User;
+import edu.hnust.application.orm.user.User;
 import edu.hnust.application.system.ReturnPageData;
 
 public interface UserService {

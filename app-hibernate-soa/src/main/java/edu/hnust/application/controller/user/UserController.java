@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import edu.hnust.application.orm.User;
+import edu.hnust.application.orm.user.User;
 import edu.hnust.application.service.user.UserService;
 import edu.hnust.application.system.ReturnPageData;
 import edu.hnust.application.system.ServiceResponse;
